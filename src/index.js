@@ -1,3 +1,4 @@
+import React from "react";
 import ReactDOM from "react-dom/client"; //we use ReactDOM to render into the DOM
 
 const data = {
@@ -18,6 +19,18 @@ const data = {
  **/
 
 const container = document.getElementById("root");
+const content = (
+  <div class="card m-5">
+    <img class="card-img-top" src={data.image} alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">{data.cardTitle}</h5>
+      <p class="card-text">{data.cardDescription}</p>
+      <a href={data.button.url} class="btn btn-primary">
+        {data.button.label}
+      </a>
+    </div>
+  </div>
+);
 
 // create a root
 const root = ReactDOM.createRoot(container);
